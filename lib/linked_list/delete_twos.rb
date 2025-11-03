@@ -1,5 +1,5 @@
-require './lib/linked_list'
-require './lib/node'
+require './lib/linked_list/linked_list'
+require './lib/linked_list/node'
 
 class DeleteTwos
   def self.delete_twos(head)

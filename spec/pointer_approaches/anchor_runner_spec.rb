@@ -1,4 +1,4 @@
-require './lib/anchor_runner'
+require './lib/pointer_approaches/anchor_runner'
 
 describe AnchorRunner do
   describe "#partition_ones" do

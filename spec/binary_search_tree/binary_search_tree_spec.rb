@@ -1,4 +1,4 @@
-require './lib/binary_search_tree'
+require './lib/binary_search_tree/binary_search_tree'
 
 describe BinarySearchTree do
   describe '#insert 2 items' do

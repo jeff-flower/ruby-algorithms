@@ -1,4 +1,4 @@
-require './lib/stack'
+require './lib/data_structures/stack'
 
 describe Stack do
   describe "#initialize" do

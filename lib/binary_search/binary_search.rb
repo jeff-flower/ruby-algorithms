@@ -1,4 +1,3 @@
-require 'pry-byebug'
 # Implementation of binary search
 # Works on a sorted array of integers
 class BinarySearch
@@ -144,8 +143,6 @@ class BinarySearch
     left = 0
     right = arr.length - 1
     first_positive_index = arr.length
-
-    binding.pry
 
     while left <= right
       mid = (left + right) / 2

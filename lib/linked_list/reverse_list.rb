@@ -1,4 +1,4 @@
-require './lib/node'
+require './lib/linked_list/node'
 
 class ReverseList
   # reverse the order of a list

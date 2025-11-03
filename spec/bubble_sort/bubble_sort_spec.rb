@@ -1,4 +1,4 @@
-require './lib/bubble_sort'
+require './lib/bubble_sort/bubble_sort'
 
 describe BubbleSort do
   describe '#sort' do

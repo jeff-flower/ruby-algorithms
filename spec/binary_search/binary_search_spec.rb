@@ -1,4 +1,4 @@
-require './lib/binary_search'
+require './lib/binary_search/binary_search'
 describe BinarySearch do
   describe '#find' do
     it 'returns the index of a value when it exists in a sorted array' do

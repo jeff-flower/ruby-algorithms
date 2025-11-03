@@ -1,4 +1,4 @@
-require './lib/node'
+require './lib/binary_search_tree/node'
 require 'pry-byebug'
 
 # Binary Search Tree

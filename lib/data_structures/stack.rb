@@ -1,4 +1,4 @@
-require './lib/node'
+require './lib/data_structures/node'
 
 class Stack
   def initialize

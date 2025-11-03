@@ -1,6 +1,6 @@
-require './lib/reverse_list'
-require './lib/linked_list'
-require './lib/node'
+require './lib/linked_list/reverse_list'
+require './lib/linked_list/linked_list'
+require './lib/linked_list/node'
 
 describe ReverseList do
   describe '#reverse_list' do

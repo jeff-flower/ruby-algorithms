@@ -1,4 +1,4 @@
-require './lib/matching_brackets'
+require './lib/data_structures/matching_brackets'
 
 describe MatchingBrackets do
 

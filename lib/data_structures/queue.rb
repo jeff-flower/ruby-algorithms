@@ -1,5 +1,4 @@
-require './lib/queue'
-require './lib/node'
+require './lib/data_structures/node'
 
 class Queue
   def initialize

@@ -1,4 +1,4 @@
-require './lib/start_end'
+require './lib/pointer_approaches/start_end'
 
 describe StartEnd do
   describe "#find_target_sum" do

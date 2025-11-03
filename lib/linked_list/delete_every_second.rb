@@ -1,4 +1,4 @@
-require './lib/linked_list'
+require './lib/linked_list/linked_list'
 
 class DeleteEverySecond
   # Delete every other item in a linked list starting with the second item

@@ -1,5 +1,5 @@
-require './lib/linked_list'
-require './lib/delete_twos'
+require './lib/linked_list/linked_list'
+require './lib/linked_list/delete_twos'
 
 describe DeleteTwos do
   describe "#delete_twos" do

@@ -1,4 +1,4 @@
-require './lib/queue'
+require './lib/data_structures/queue'
 
 describe Queue do
   it 'the first item added to the stack is the first item to come out' do

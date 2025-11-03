@@ -1,5 +1,5 @@
-require './lib/delete_every_second'
-require './lib/linked_list'
+require './lib/linked_list/delete_every_second'
+require './lib/linked_list/linked_list'
 
 describe DeleteEverySecond do
   describe 'delete_every_second' do
