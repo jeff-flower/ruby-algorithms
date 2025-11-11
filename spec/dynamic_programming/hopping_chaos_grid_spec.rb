@@ -1,7 +1,7 @@
 require './lib/dynamic_programming/hopping_chaos_grid'
 
 describe HoppingChaosGrid do
-  describe 'bottom up' do
+
     test_cases = [
       {
         rows: 1,
@@ -29,11 +29,20 @@ describe HoppingChaosGrid do
         expected: 252 
       },
     ]
-
+  describe 'bottom up' do
     test_cases.each do |test_case|
       test_case => {rows:, columns:, expected:}
       it "#{rows}, #{columns}" do
-        expect(HoppingChaosGrid.bottom_up(rows, columns)).to be expected
+        expect(HoppingChaosGrid.bottom_up(rows, columns)).to eq expected
+      end
+    end
+  end
+
+  describe 'top down' do
+    test_cases.each do |test_case|
+      test_case => {rows:, columns:, expected:}
+      it "#{rows}, #{columns}" do
+        expect(HoppingChaosGrid.top_down(rows, columns)).to eq expected
       end
     end
   end
