@@ -19,6 +19,60 @@ class HoppingChaosCats
     dp[rows-1][columns-1]
   end
 
+  def self.top_down(grid)
+    memo = Hash.new
+    rows = grid.length
+    columns = grid[0].length
+
+    top_down_helper(grid, memo, rows - 1, columns - 1)
+  end
+
+  def self.top_down_helper(grid, memo, row_index, column_index)
+    if total_paths_needs_calculating?(memo, row_index, column_index)
+
+      if top_down_base_case?(grid, row_index, column_index)
+        total_paths = get_total_paths_for_base_case(grid, row_index, column_index)
+      else
+        total_paths = top_down_helper(grid, memo, row_index - 1, column_index) + top_down_helper(grid, memo, row_index, column_index - 1)
+      end
+
+      save_total_paths!(memo, row_index, column_index, total_paths)
+    end
+
+    get_total_paths(memo, row_index, column_index)
+  end
+  
+  def self.top_down_base_case?(grid, row_index, column_index)
+    blocked_by_cat?(grid[row_index][column_index]) or top_or_left_edge?(row_index, column_index)
+  end
+
+  def self.get_total_paths_for_base_case(grid, row_index, column_index)
+    blocked_by_cat?(grid[row_index][column_index]) ? 0 : 1
+  end
+
+  def self.get_memo_key(row_index, column_index)
+    "#{row_index} #{column_index}"
+  end
+
+  def self.total_paths_needs_calculating?(memo, row_index, column_index)
+    memo_key = get_memo_key(row_index, column_index)
+
+    !memo.has_key?(memo_key)
+  end
+
+  def self.save_total_paths!(memo, row_index, column_index, total_paths)
+    memo_key = get_memo_key(row_index, column_index)
+
+    memo[memo_key] = total_paths
+  end
+
+  def self.get_total_paths(memo, row_index, column_index)
+    memo_key = get_memo_key(row_index, column_index)
+
+    memo[memo_key]
+
+  end
+
   def self.blocked_by_cat?(grid_element)
     grid_element == "C"
   end
